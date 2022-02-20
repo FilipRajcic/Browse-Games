@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script defer type="module" src="src/js/controller.js"></script>
+    <title>Browse Games</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="src/img/logo.png" alt="Logo" class="header__logo" />
+        <form class="search">
+          <input
+            type="text"
+            class="search__field"
+            placeholder="Search your favorite games..."
+          />
+          <button class="search__btn">
+            <svg class="search__icon">
+              <use href="src/img/icons.svg#icon-search"></use>
+            </svg>
+            <span>Search</span>
+          </button>
+        </form>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <button class="nav__btn--accent nav__btn--log-in">
+                <svg class="nav__icon--accent">
+                  <use href="src/img/icons.svg#icon-user"></use>
+                </svg>
+                <span>Log in</span>
+              </button>
+              <div class="login">
+                <div class="login__arrow"></div>
+                <h1 class="login__header">Log in Form</h1>
+                <form class="login__form">
+                  <label class="login__label">Username</label>
+                  <input type="text" class="login__input" />
+                  <label class="login__label">Password</label>
+                  <input type="password" class="login__input" />
+                </form>
+                <button class="login__btn">Log In</button>
+              </div>
+            </li>
+            <li class="nav__item">
+              <button class="nav__btn nav__btn--sign-up">
+                <svg class="nav__icon">
+                  <use href="src/img/icons.svg#icon-user-plus"></use>
+                </svg>
+                <span>Sign up</span>
+              </button>
+              <div class="signup">
+                <div class="signup__arrow"></div>
+                <h1 class="signup__header">Sign Up Form</h1>
+                <form class="signup__form">
+                  <label class="signup__label">Username</label>
+                  <input type="text" class="signup__input" />
+                  <label class="signup__label">Email</label>
+                  <input type="email" class="signup__input" />
+                  <label class="signup__label">Password</label>
+                  <input type="password" class="signup__input" />
+                  <label class="signup__label">Repeat password</label>
+                  <input type="password" class="signup__input" />
+                </form>
+                <button class="signup__btn">Sign Up</button>
+              </div>
+            </li>
+            <li class="nav__item">
+              <button class="nav__btn nav__btn--bookmarks">
+                <svg class="nav__icon">
+                  <use href="src/img/icons.svg#icon-bookmarks"></use>
+                </svg>
+                <span>Bookmarks</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="games">
+        <!-- <div class="spinner">
+          <svg>
+            <use href="src/img/icons.svg#icon-spinner2"></use>
+          </svg>
+        </div> -->
+        <div class="games__container">
+          <div class="message">
+            <div>
+              <svg>
+                <use href="src/img/icons.svg#icon-smile"></use>
+              </svg>
+            </div>
+            <p>Search your favorite games!!!</p>
+          </div>
+        </div>
+        <nav class="games__navigation">
+          <!-- <button class="game__btn btn--prev">
+            <svg class="game__btn__icon">
+              <use href="src/img/icons.svg#icon-arrow-left2"></use>
+            </svg>
+            <span class="span-1">Page 1</span>
+          </button>
+          <button class="game__btn btn--next">
+            <span class="span-2">Page 3</span>
+            <svg class="game__btn__icon">
+              <use href="src/img/icons.svg#icon-arrow-right2"></use>
+            </svg>
+          </button> -->
+        </nav>
+      </section>
+      <section class="partners">
+        <h1 class="partners__heading">our partners</h1>
+        <div class="partners__container">
+          <ul class="partners__list">
+            <li class="partners__item">
+              <img
+                src="src/img/activision.png"
+                alt="activision"
+                class="partners__img"
+              />
+            </li>
+            <li class="partners__item">
+              <img
+                src="src/img/capcom.png"
+                alt="capcom"
+                class="partners__img"
+              />
+            </li>
+            <li class="partners__item">
+              <img src="src/img/ea.png" alt="ea" class="partners__img" />
+            </li>
+            <li class="partners__item">
+              <img
+                src="src/img/konami.png"
+                alt="konami"
+                class="partners__img"
+              />
+            </li>
+            <li class="partners__item">
+              <img src="src/img/sega.png" alt="sega" class="partners__img" />
+            </li>
+            <li class="partners__item">
+              <img
+                src="src/img/ubisoft.png"
+                alt="ubisoft"
+                class="partners__img"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

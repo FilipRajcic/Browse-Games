@@ -1,0 +1,36 @@
+.partners {
+  grid-area: partners;
+  background-color: $color-gray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+
+  &__heading {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-text-black;
+  }
+
+  &__container {
+    margin-top: 1rem;
+  }
+  &__list {
+    list-style: none;
+  }
+
+  &__img {
+    height: 8rem;
+    filter: grayscale(80%);
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      filter: none;
+      transform: scale(1.05);
+    }
+  }
+}

@@ -1,0 +1,105 @@
+// COLORS
+$color-accent: #e03131;
+$color-accent-dark: #c92a2a;
+$color-accent-light: #f8bbd0;
+$color-text-black: #343a40;
+$color-gray: #868e96;
+$color-gray-light: #ced4da;
+
+$color-black: #212529;
+$color-text-white: #fff;
+
+// RESPONSIVE VARIABLES
+
+$bp-largest: 90em; // 1440px
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+$bp-phone: 20em; // 320px
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-text-white, 0.2),
+      rgba($color-text-white, 0.2)
+    ),
+    url(../img/hero.jpg);
+}
+
+.container {
+  height: 70vh;
+  width: 60%;
+  margin: 4vw auto;
+  padding: 0;
+
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-rows: 8rem 60rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "navigation navigation navigation navigation"
+    "games games games partners";
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+
+  svg {
+    height: 6rem;
+    width: 6rem;
+    fill: $color-accent;
+    animation: rotate 2s infinite linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.message,
+.error {
+  margin: 5rem auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: $color-black;
+  font-size: 2rem;
+  font-weight: 600;
+  div svg {
+    margin-right: 2rem;
+    height: 5rem;
+    width: 5rem;
+    fill: $color-black;
+  }
+}

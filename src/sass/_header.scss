@@ -1,0 +1,124 @@
+.header {
+  grid-area: navigation;
+  background-color: $color-black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1rem;
+  &__logo {
+    margin-left: 2rem;
+    height: 5rem;
+    padding: 0;
+  }
+}
+.search {
+  background-color: $color-gray;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  transition: all 0.3s;
+  height: 5rem;
+  border-radius: 1rem;
+
+  &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 3rem rgba($color-text-white, 0.1);
+  }
+
+  &__field {
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: $color-text-white;
+    font-size: 1.7rem;
+    width: 30rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-text-white;
+    }
+  }
+  &__btn {
+    background-color: $color-accent-dark;
+    border: none;
+    text-transform: uppercase;
+    color: $color-text-white;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    &:hover {
+      background-color: $color-accent;
+    }
+  }
+
+  &__icon {
+    fill: $color-text-white;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+  }
+}
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__btn {
+    background: $color-gray;
+    border: none;
+    text-transform: uppercase;
+    color: $color-text-black;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    &:hover {
+      background: $color-gray-light;
+    }
+
+    &--accent {
+      background: $color-accent-dark;
+      border: none;
+      text-transform: uppercase;
+      color: $color-text-white;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      &:hover {
+        background: $color-accent;
+      }
+    }
+  }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    fill: $color-text-black;
+  }
+  &__icon--accent {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    fill: $color-text-white;
+  }
+}

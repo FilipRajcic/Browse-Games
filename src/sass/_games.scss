@@ -1,0 +1,141 @@
+.games {
+  grid-area: games;
+  background-color: $color-gray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 85%;
+  }
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    align-items: center;
+  }
+}
+.game {
+  margin-top: 2rem;
+  background-color: $color-black;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 6rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+
+  &__img {
+    margin-left: 1rem;
+  }
+
+  &__title {
+    width: 40%;
+    text-align: center;
+    margin-left: 1rem;
+  }
+
+  &__release {
+    margin-left: 1rem;
+    width: 25%;
+
+    text-align: center;
+  }
+  &__price {
+    color: $color-accent;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    width: 20%;
+    text-align: center;
+  }
+
+  &__btn__universal {
+    border: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  &__icon__universal {
+    height: 2rem;
+    width: 2rem;
+    transition: all 0.4s;
+  }
+  &__bookmark__icon {
+    fill: $color-accent-dark;
+  }
+
+  &__bookmark__btn {
+    color: $color-text-white;
+
+    background: $color-text-white;
+    &:hover {
+      background: $color-accent-dark;
+    }
+    &:hover > .game__bookmark__icon {
+      fill: $color-text-white;
+    }
+  }
+
+  &__steam__icon {
+    fill: $color-text-white;
+  }
+
+  &__steam__btn {
+    color: $color-text-white;
+    background: $color-text-black;
+    &:hover {
+      background: $color-gray;
+    }
+    &:hover > .game__steam__icon {
+      fill: $color-text-black;
+    }
+  }
+
+  &__btn {
+    background: $color-text-white;
+    border: none;
+    text-transform: uppercase;
+    color: $color-accent-dark;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    &:hover {
+      background: $color-accent-dark;
+      color: $color-text-white;
+    }
+    &:hover > .game__btn__icon {
+      fill: $color-text-white;
+    }
+  }
+
+  &__btn__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-accent-dark;
+    transition: all 0.4s;
+  }
+}
+.span-1 {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+.span-2 {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
