@@ -35,22 +35,22 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
-const controlAddBookmark = function () {
-  model.state.search.results.map((game) => {
-    if (!game.bookmarked) model.addBookmark(game);
-    else model.deleteBookmark(game.id);
-  });
-};
+// const controlAddBookmark = function () {
+//   model.state.search.results.map((game) => {
+//     if (!game.bookmarked) model.addBookmark(game);
+//     else model.deleteBookmark(game.id);
+//   });
+// };
 
-const controlShowBookmarks = function () {
-  bookmarksView.render(model.state.bookmarks);
-  console.log(model.state.bookmarks);
-};
+// const controlShowBookmarks = function () {
+//   bookmarksView.render(model.state.bookmarks);
+//   console.log(model.state.bookmarks);
+// };
 
 const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
-  resultsView.addHandlerAddBookmark(controlAddBookmark);
-  bookmarksView.addHandlerShowBookmarks(controlShowBookmarks);
+  // resultsView.addHandlerAddBookmark(controlAddBookmark);
+  // bookmarksView.addHandlerShowBookmarks(controlShowBookmarks);
 };
 init();
